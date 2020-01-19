@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.starry.dao.IAdministorDao">
+	<select id="adlogin" resultType="com.starry.entity.Administor">
+		select * from Administor
+		where
+		Name=#{Name} and Pwd=#{Pwd}
+	</select>
+	<!-- //添加科室 -->
+	<insert id="adDepart" parameterType="com.starry.entity.Department">
+	insert ignore  into Department values(#{cNumber},#{dName},#{dDec})
+	</insert>
+	
+	<!-- //String dNumber, String dName, String dPwd, String cNumber,
+			String dInfo, String dResume, String dTel, String dEmail, String image -->
+	<insert id="adDoctor" parameterType="com.starry.entity.Doctor">
+	insert ignore  into Doctor values(#{dNumber},#{dName},#{dPwd},#{dDec},#{cNumber},#{dInfo},#{dResume},#{dTel},#{dEmail},#{image})
+	</insert>
+	<update id="updatePwd" parameterType="com.starry.entity.Administor">
+	update Administor set Pwd=#{Pwd} where aNumber=#{aNumber}
+	</update>
+	
+	<select id="getFeedBack" resultType="com.starry.entity.Feedback">
+	select * from FeedBack
+	</select>
+	
+</mapper>

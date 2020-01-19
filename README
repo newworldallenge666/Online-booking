@@ -1,0 +1,9 @@
+ 基于SSM框架的就医预约挂号系统的后台
+## 作者：
+ QQ820629211,QQ1656724967，对代码有什么疑问或者不会部署可以通过QQ找我
+## 系统
+Windows10
+## 工具
+myeclipse 2017 + Tomcat 8.5 + jdk 1.8 + MySQL 8.0
+1、实现PageHelper分页功能，bootstrap自适应框架
+
